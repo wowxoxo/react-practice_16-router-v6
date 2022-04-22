@@ -1,9 +1,9 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 
-import Welcome from './pages/Welcome';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
-import MainHeader from './components/MainHeader';
+import Welcome from "./pages/Welcome";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import MainHeader from "./components/MainHeader";
 
 function App() {
   return (
@@ -11,14 +11,17 @@ function App() {
       <MainHeader />
       <main>
         <Switch>
-          <Route path='/welcome'>
+          <Route path="/welcome">
             <Welcome />
           </Route>
-          <Route path='/products' exact>
+          <Route path="/products" exact>
             <Products />
           </Route>
-          <Route path='/products/:productId'>
+          <Route path="/products/:productId">
             <ProductDetail />
+          </Route>
+          <Route path="/products/edit">
+            <p>Edit the Product</p>
           </Route>
         </Switch>
       </main>
